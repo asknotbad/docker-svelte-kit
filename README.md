@@ -4,10 +4,10 @@ Docker container with Svelte-Kit
 
 ## Supported tags and respective <code>Dockerfile</code> links
 
-* [<code>js-adapter-node</code>, <code>latest</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile)
-* [<code>js-adapter-node-alpine</code>, <code>latest-alpine</code>, <code>alpine</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile.alpine)
-* [<code>js-adapter-node-dev</code>, <code>latest-dev</code>, <code>dev</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile.dev)
-* [<code>js-adapter-node-dev-alpine</code>, <code>latest-dev-alpine</code>, <code>dev-alpine</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile.dev.alpine)
+* [<code>js-adapter-node</code>, <code>latest</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/js/adapter-node/Dockerfile)
+* [<code>js-adapter-node-alpine</code>, <code>latest-alpine</code>, <code>alpine</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/js/adapter-node/Dockerfile.alpine)
+* [<code>js-adapter-node-dev</code>, <code>latest-dev</code>, <code>dev</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main//js/adapter-nodedocker/Dockerfile.dev)
+* [<code>js-adapter-node-dev-alpine</code>, <code>latest-dev-alpine</code>, <code>dev-alpine</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/js/adapter-node/Dockerfile.dev.alpine)
 
 ## docker-compose.yml
 
@@ -19,7 +19,7 @@ services:
     container_name: svelte-kit
     restart: always
     build:
-      context: ./docker
+      context: ./docker/js/adapter-node
     volumes:
       - ./docker/js/adapter-node/:/app
       - /app/node_modules
@@ -38,7 +38,7 @@ services:
     dockerfile: Dockerfile.dev
     restart: always
     build:
-      context: ./docker
+      context: ./docker/js/adapter-node
     volumes:
       - ./docker/js/adapter-node/:/app
       - /app/node_modules
