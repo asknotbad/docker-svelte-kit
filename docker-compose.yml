@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  svelte-kit:
+    container_name: svelte-kit
+    restart: always
+    build:
+      context: ./docker
+    volumes:
+      - ./docker/js/adapter-node/:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000

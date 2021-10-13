@@ -1,0 +1,20 @@
+FROM node:14 AS builder
+
+RUN mkdir -p /app
+WORKDIR /app
+
+COPY ./js/adapter-node/package*.json ./
+RUN npm ci
+
+COPY ./js/adapter-node .
+RUN npm run build
+
+FROM node:14
+
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/build ./build
+
+EXPOSE 3000
+
+CMD [ "node", "build/index.js" ]
