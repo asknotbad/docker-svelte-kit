@@ -6,7 +6,7 @@ services:
     dockerfile: Dockerfile.dev
     restart: always
     build:
-      context: ./docker
+      context: ./docker/js/adapter-node
     volumes:
       - ./docker/js/adapter-node/:/app
       - /app/node_modules
