@@ -2,6 +2,13 @@
 
 Docker container with Svelte-Kit
 
+## Supported tags and respective <code>Dockerfile</code> links
+
+* [<code>js-adapter-node</code>, <code>latest</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile)
+* [<code>js-adapter-node-alpine</code>, <code>latest-alpine</code>, <code>alpine</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile.alpine)
+* [<code>js-adapter-node-dev</code>, code>latest-dev</code>, <code>dev</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile.dev)
+* [<code>js-adapter-node-dev-alpine</code>, code>latest-dev-alpine</code>, <code>dev-alpine</code>](https://github.com/asknotbad/docker-svelte-kit/blob/main/docker/Dockerfile.dev.alpine)
+
 ## docker-compose.yml
 
 ```yaml
