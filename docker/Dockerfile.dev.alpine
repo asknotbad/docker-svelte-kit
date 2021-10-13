@@ -1,0 +1,11 @@
+FROM node:14-alpine
+
+RUN mkdir -p /app
+WORKDIR /app
+
+COPY ./js/adapter-node .
+RUN npm ci
+
+EXPOSE 3000
+
+CMD [ "npm", "run", "dev" ]

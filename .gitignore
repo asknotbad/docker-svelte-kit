@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# misc
+*.log
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+*.code-workspace
+
+.env
+
+/docker/log/*.*
